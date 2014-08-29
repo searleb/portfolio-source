@@ -1,9 +1,5 @@
 @import 'bootstrap';
-body html{
-  height: 100%;
-  width: 100%;
-}
-#pitch-wrapper{
+.non-mobile-wrapper{
   min-height: 100vh;
   min-width: 100vw;
   overflow: hidden;
@@ -12,6 +8,11 @@ body html{
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+.mobile-wrapper{
+  position: relative;
+  min-height: 450px;
+  // min-width: 300px; 
 }
 #elevator-pitch{
   color: #ffffff;
