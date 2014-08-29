@@ -6,14 +6,21 @@
 	padding-right: 0;
 }
 .project{
-	margin-top: 50px;
+	margin-top: 40px;
 	display: inline-block;
 	vertical-align: middle;
 }
-#projects-two{	
+#recent-projects{
+  margin-top: 70px;
+}
+#home-projects{
+  display: none;
 }
 #site-content{
 	background-color: white;
 	padding-left: 15px;
 	padding-right: 15px;
+}
+.fa-size{
+  font-size: 4em;
 }

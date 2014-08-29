@@ -9,14 +9,30 @@
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title || "Bill Searle" %></title>
     
+    <!-- font awesome -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <%= stylesheet_link_tag "normalize", "all" %>
     <%= javascript_include_tag  "all" %>
     
     <!-- bootstrap view port -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
   </head>
   
   <body class="container-fluid">
     <%= yield %>
+  <footer id="contact" class="row text-center">
+    <div class="col-sm-12">
+    <a href="http://www.linkedin.com/pub/bill-searle/27/98b/398" target="_blank" class="fa fa-linkedin-square fa-size"></a>
+
+    <a href="http://goingwdi.tumblr.com/"target="_blank" class="fa fa-tumblr-square fa-size"></a>
+
+    <a href="https://github.com/searleb"target="_blank" class="fa fa-github-square fa-size"></a>
+
+    <a href="https://twitter.com/Bill_Searle"target="_blank" class="fa fa-twitter-square fa-size"></a>
+    
+    <a href="http://www.linkedin.com/pub/bill-searle/27/98b/398"target="_blank" class="fa fa-envelope-square fa-size"></a>
+    </div>
+  </footer>  
   </body>
 </html>

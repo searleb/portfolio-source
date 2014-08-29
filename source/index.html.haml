@@ -8,8 +8,8 @@
 %div#site-content.col-sm-12
 	-# Weatherify
 	%div.row
-		%section.project 
-			%h1#wdi-projects.text-center WDI Projects 
+		%h1#recent-projects.text-center Recent Projects 
+		%section.project
 			%div.col-sm-4.col-sm-offset-2
 				%h3 Weatherify.
 				%p My first WDI project, Weatherify takes your local weather conditions and creates a spotify playlist based on that information.
@@ -54,8 +54,12 @@
 
 			%div.col-sm-4
 				%img.img-responsive{:src => "/images/tweetbottle-white.jpg", :alt => "Tweet in a bottle"}
+	
+	%section.choose.text-center 
+		%h3#show-more see more projects here
+		%h3 OR contact me!
 
-	%div.row
+	%div#home-projects.row
 		%section#projects-two
 			%h1#home-projects.text-center Home Projects
 			%div.col-sm-4
@@ -64,3 +68,4 @@
 				%img.img-responsive{:src => "/images/untitlediphone.jpg", :alt => "Tweet in a bottle"}
 			%div.col-sm-4
 				%img.img-responsive{:src => "/images/nerd.jpg", :alt => "Tweet in a bottle"}
+
