@@ -1,0 +1,71 @@
+@import 'bootstrap';
+
+#pitch-wrapper{
+	min-height: 100vh;
+	min-width: 100vw;
+  background: url(/images/backgroundblur.png) no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+	// position: relative;
+}
+#elevator-pitch{
+	color: #ffffff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.container-fluid{
+	padding-left: 0;
+	padding-right: 0;
+}
+.project{
+	margin-top: 50px;
+	display: inline-block;
+	vertical-align: middle;
+
+}
+#projects-two{
+	
+}
+
+
+#background{
+	// background: url(/images/backgroundblur.png) no-repeat center center; 
+ //  -webkit-background-size: cover;
+ //  -moz-background-size: cover;
+ //  -o-background-size: cover;
+ //  background-size: cover;
+
+ //  // // /* Set rules to fill background */
+ //  min-height: 100vh;
+ //  min-width: 100vw;
+	
+  // // /* Set up proportionate scaling */
+  // // width: 100%;
+  // // height: auto;
+	
+  // /* Set up positioning */
+  // position: fixed;
+  // top: 0;
+  // left: 0;
+  // z-index: -100;
+}
+
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+  #background {
+    left: 50%;
+    margin-left: -512px;   /* 50% */
+  }
+}
+
+#site-content{
+	background-color: white;
+	padding-left: 15px;
+	padding-right: 15px;
+}

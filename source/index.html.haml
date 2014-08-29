@@ -1,0 +1,67 @@
+%div#background
+%div#pitch-wrapper
+	%section#elevator-pitch.text-center.col-xs-12
+		%h1 Hello!
+		%p My name is Bill.
+		%p I am a full stack web developer, interested in smart designs and interactivity. Currently available for work in the Sydney area.
+		%p Please take a look around.
+
+%div#site-content.col-sm-12
+	-# Weatherify
+	%div.row
+		%section.project 
+			%h1#wdi-projects.text-center WDI Projects 
+			%div.col-sm-4.col-sm-offset-2
+				%h3 Weatherify.
+				%p My first WDI project, Weatherify takes your local weather conditions and creates a spotify playlist based on that information.
+				%p For example, if your summary is 'Partly Cloudy', Weatherify will create a playlist of tracks containing 'cloudy' in their title.
+
+				Listen 
+				%a{:href => "http://weatherify.ninefold-apps.com/", :target => "blank"} here.
+
+			%div.col-sm-4
+				%img.img-responsive{:src => "/images/weatherify-white.jpg", :alt => "Weatherify"}
+	
+	%div.row
+		-# Bero
+		%section.project
+			%div.col-sm-4.col-sm-offset-2.col-sm-push-4
+				%h3 Bero.
+				%p Have you ever hidden something and guided someone to it by only stating 'hotter' or 'colder' as they moved around? Of course you have!
+				%p Bero takes this concept and places it in your hand. Bero will guide you to a destination of your choice or if you're lucky enough, a friend who has connected with you. The closer you get, the hotter (redder!) your screen becomes, just follow the arrow.
+				Bero with me 
+				%a{:href => "http://bero.herokuapp.com/", :target => "blank"} here.
+			
+			%div.col-sm-4.col-sm-pull-4
+				%img.img-responsive{:src => "/images/bero.jpg", :alt => "Bero"}
+ 	
+
+	%div.row
+		-# Tweet in a bottle
+		%section.project
+			%div.col-sm-4.col-sm-offset-2
+				%h3 
+					Tweet in a 
+					%s Bottle.
+					Bubble.
+				%p Personally I've never found a romantic message in a bottle written a hundred years ago, or any message in a bottle...
+				%p 
+					Well, Tweet in a 
+					%s Bottle
+					Bubble allows you to find something similar in the digital sea.
+
+				Leave a message 
+				%a{:href => "http://tweet-in-a-bottle.herokuapp.com/", :target => "blank"} here.
+
+			%div.col-sm-4
+				%img.img-responsive{:src => "/images/tweetbottle-white.jpg", :alt => "Tweet in a bottle"}
+
+	%div.row
+		%section#projects-two
+			%h1#home-projects.text-center Home Projects
+			%div.col-sm-4
+				%img.img-responsive{:src => "/images/altshft.jpg", :alt => "Tweet in a bottle"}
+			%div.col-sm-4
+				%img.img-responsive{:src => "/images/untitlediphone.jpg", :alt => "Tweet in a bottle"}
+			%div.col-sm-4
+				%img.img-responsive{:src => "/images/nerd.jpg", :alt => "Tweet in a bottle"}
