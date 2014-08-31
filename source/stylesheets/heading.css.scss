@@ -1,12 +1,13 @@
-.non-mobile-wrapper{
-  min-height: 100vh;
-  min-width: 100vw;
-  overflow: hidden;
-  background: url(/images/sea-anchor.jpg) no-repeat center center;
+#background-color{
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+.non-mobile-wrapper{
+  min-height: 100vh;
+  min-width: 100vw;
+  overflow: hidden;
 }
 .mobile-wrapper{
   position: relative;

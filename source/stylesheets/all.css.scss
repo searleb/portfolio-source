@@ -1,3 +1,4 @@
+// @import 'font-awesome.min';
 @import 'bootstrap';
 @import 'heading';
 
@@ -6,7 +7,8 @@
 	padding-right: 0;
 }
 .project{
-	margin-top: 40px;
+	margin-top: 20px;
+  margin-bottom: 20px;
 	display: inline-block;
 	vertical-align: middle;
 }
@@ -20,6 +22,10 @@
 	background-color: white;
 	padding-left: 15px;
 	padding-right: 15px;
+}
+#contact{
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 .fa-size{
   font-size: 4em;
