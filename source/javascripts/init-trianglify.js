@@ -1,23 +1,22 @@
-var svg = svg || {};
-svg.t = new Trianglify({
+var t = new Trianglify({
 	noiseIntensity: 0,
 });
 
-svg.draw = function (){
-	svg.width = $(document).width();
-	svg.height = $(document).height();
-	svg.pattern = svg.t.generate(svg.width, svg.height);
+var svgDraw = function (t){
+	var width = $(document).width();
+	var height = $(document).height();
+	var pattern = t.generate(width, height);
 	$('#background').css({
-		'background': svg.pattern.dataUrl
+		'background': pattern.dataUrl
 	});
 	$('#contact').css({
-		'background': svg.pattern.dataUrl
+		'background': pattern.dataUrl
 	});
 };
 
 $(document).ready(function(){
-	svg.draw();
+	svgDraw(t);
 });
 $(window).resize(function() {
- svg.draw();
+ svgDraw(t);
 });
