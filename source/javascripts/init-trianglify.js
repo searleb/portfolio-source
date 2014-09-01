@@ -1,14 +1,23 @@
-$(document).ready(function(){
-	var t = new Trianglify({
-		noiseIntensity: 0,
-	});
-	var width = $(document).width();
-	var height = $(document).height();
-	var pattern = t.generate(width, height);
+var svg = svg || {};
+svg.t = new Trianglify({
+	noiseIntensity: 0,
+});
+
+svg.draw = function (){
+	svg.width = $(document).width();
+	svg.height = $(document).height();
+	svg.pattern = svg.t.generate(svg.width, svg.height);
 	$('#background').css({
-		'background': pattern.dataUrl
+		'background': svg.pattern.dataUrl
 	});
 	$('#contact').css({
-		'background': pattern.dataUrl
+		'background': svg.pattern.dataUrl
 	});
-})
+};
+
+$(document).ready(function(){
+	svg.draw();
+});
+$(window).resize(function() {
+ svg.draw();
+});
