@@ -6,3 +6,7 @@
 //= require count-up
 //= require coffee-buyer
 //= require_tree .
+
+$(document).ready(function(){
+	$('body').velocity("fadeIn", { duration: 1500 });
+});
