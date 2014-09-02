@@ -34,5 +34,25 @@
   background-repeat: none;
 }
 .fa-size{
-  font-size: 4em;
+  font-size: 3em;
+   p{
+      font-size: 0.4em;
+  }
 }
+a{
+  color: #374140;
+}
+a:hover{
+  color: #2A2C2B;
+  text-decoration: none;
+}
+article{
+  display: inline-block;
+  margin: 10px;
+}
+.btn{
+  border: 1px solid #374140;
+  border-radius: 4px; 
+}
+
+

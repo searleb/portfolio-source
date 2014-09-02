@@ -1,4 +1,5 @@
 .non-mobile-wrapper{
+  position: relative;
   min-height: 100vh;
   min-width: 100vw;
   overflow: hidden;
@@ -10,7 +11,7 @@
   overflow: hidden;
 }
 #elevator-pitch{
-  color: #ffffff;
+  color: #374140;
   position: absolute;
   left: 50%;
   top: 50%;
