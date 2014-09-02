@@ -12,7 +12,7 @@
 		%section.project
 			%div.col-sm-4.col-sm-offset-2
 				%h3 Weatherify.
-				%p My first WDI project, Weatherify takes your local weather conditions and creates a spotify playlist based on that information.
+				%p My first WDI project, Weatherify takes your local weather conditions and creates a Spotify playlist based on that information.
 				%p For example, if your summary is 'Partly Cloudy', Weatherify will create a playlist of tracks containing 'cloudy' in their title.
 
 				#weatherify-link.btn.btn-primary Listen here
@@ -53,26 +53,41 @@
 			%div.col-sm-4
 				%img.img-responsive{:src => "/images/tweetbottle-white.jpg", :alt => "Tweet in a bottle"}
 	
-	%section.choose.text-center 
-		#show-more.btn.btn-primary See more projects
 
-	%div#home-projects.row.text-center
-		%section#projects-two
-			%h1#home-projects.text-center Home Projects
-			%div.col-sm-4
-				%img.img-responsive{:src => "/images/altshft.jpg", :alt => "alt//shft"}
+	%section.choose.col-sm-offset-2 
+		#show-more-button.show-more.btn.btn-primary See more projects
+
+	#more-projects
+		%section.project
+			%div.col-sm-4.col-sm-offset-2.col-sm-push-4
 				%h3 ALT//SHFT
-				%p A parallaxing site built to showcase the projects of alt//shft.
+				%p A full page parallaxing site built to showcase the curation projects of ALT//SHFT.
 				#alt-link.btn.btn-primary ALT//SHFT 
-
+			%div.col-sm-4.col-sm-pull-4	
+				%img.img-responsive{:src => "/images/altshft.jpg", :alt => "alt//shft"}
+		
+		%section.project
+			%div.col-sm-4.col-sm-offset-2
+				%h3 Untitled Productions
+				%p Untitled Productions is a full service video production house, this showcase site was my final project coming out of General Assembly's Front End Web Dev course. They site was live for a year.
+				#untitled-link.btn.btn-primary Untitled Productions
 			%div.col-sm-4
 				%img.img-responsive{:src => "/images/untitledlandscape.jpg", :alt => "Untitled Productions"}
-				%h3 Untitled Productions
-				%p Untitled Productions is a full service video production house.
-				#untitled-link.btn.btn-primary Untitled Productions
-
-			%div.col-sm-4
-				%img.img-responsive{:src => "/images/nerd.jpg", :alt => "Fanciful Nerd"}
+		
+		%section.project
+			%div.col-sm-4.col-sm-offset-2.col-sm-push-4
 				%h3 Fanciful Nerd
 				%p Just a bit of silly fun with a webcam!
 				#nerd-link.btn.btn-primary Fanciful Nerd
+			%div.col-sm-4.col-sm-pull-4	
+				%img.img-responsive{:src => "/images/nerd.jpg", :alt => "Fanciful Nerd"}
+
+
+	/ %section#coffee-buyer
+	/ 	#money-scale
+	/ 		#money-slider
+	/ 	%p
+	/ 	I have $
+	/ 	%span#funds -
+	/ 	in my coffee funds.
+	/ 	%p#statement

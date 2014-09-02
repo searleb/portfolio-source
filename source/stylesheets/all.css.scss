@@ -1,6 +1,7 @@
 @import 'bootstrap';
 @import 'heading';
 @import 'font-awesome';
+@import 'coffee-buyer';
 
 .container-fluid{
 	padding-left: 0;
@@ -15,7 +16,7 @@
 #recent-projects{
   margin-top: 70px;
 }
-#home-projects{
+#more-projects{
   display: none;
 }
 #site-content{
@@ -27,6 +28,7 @@
   background-repeat: none;
 }
 #contact{
+  margin-top: 20px;
   padding-top: 40px;
   padding-bottom: 40px;
   background-repeat: none;
