@@ -1,10 +1,24 @@
-%div#background.non-mobile-wrapper
+#lets-talk.text-center 
+	%a{:href => "mailto:billsearle@me.com?Subject=You're Awesome!", :target => "_top"} lets talk!
+%div#background-container
 	%section#elevator-pitch.text-center
-		%h1 Hi!
-		/ %p My name is Bill.
-		%p I am a full stack web developer, interested in clean, smart designs and interactivity.
-		%p Currently available for work in the Sydney area.
+		%h1#hi Hello!
+		%p 
+			I am a 
+			%strong 
+				full stack web developer,
+			interested in clean, smart designs and interactivity.
+		%p 
+			Currently 
+			%strong 
+				available
+			for work in the Sydney area.
 		%p Please take a look around.
+		%i.fa.fa-angle-down.fa-size.row
+	%div#background-1.background
+		/ %p 1
+	%div#background-2.background
+		/ %p 2
 
 #site-content
 	-# Weatherify
@@ -34,7 +48,6 @@
 			%div.col-sm-4.col-sm-pull-4
 				%img.img-responsive{:src => "/images/bero.jpg", :alt => "Bero"}
  	
-
 	%div.row
 		-# Tweet in a bottle
 		%section.project.col-sm-12
@@ -54,8 +67,7 @@
 			%div.col-sm-4
 				%img.img-responsive{:src => "/images/tweetbottle-white.jpg", :alt => "Tweet in a bottle"}
 	
-
-	%section.choose.col-sm-offset-2 
+	%section.col-sm-offset-2 
 		#show-more-button.show-more.btn See more projects
 
 	#more-projects
@@ -86,17 +98,7 @@
 		%section.project.col-sm-12
 			%div.col-sm-4.col-sm-offset-2
 				%h3 Raspberry Pi Hue Switch
-				%p A simple AJAX On/Off light switch for Phillips Hue lights running within Chromium and controlled via a touch screen.
+				%p A simple AJAX On/Off light switch for Philips Hue lights running within Chromium and controlled via a touch screen.
 				%p It's a bit quicker than fumbling through the app just to turn your lights off! 
 			%div.col-sm-4
-				%img.img-responsive{:src => "/images/hue.jpg", :alt => "Phillips Hue Switch"}
-
-
-	/ %section#coffee-buyer
-	/ 	#money-scale
-	/ 		#money-slider
-	/ 	%p
-	/ 	I have $
-	/ 	%span#funds -
-	/ 	in my coffee funds.
-	/ 	%p#statement
+				%img.img-responsive{:src => "/images/hue.jpg", :alt => "Philips Hue Switch"}

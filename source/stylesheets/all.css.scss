@@ -1,62 +1,116 @@
 @import 'bootstrap';
 @import 'font-awesome';
-// @import 'coffee-buyer';
-// @font-face{
-//   font-family: 'Track';
-//   src: url('fonts/track.otf') 
-//   format('opentype');
-//   src: url('fonts/track.ttf') 
-//   format('truetype');
-// }
+@import url(http://fonts.googleapis.com/css?family=Pacifico);
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+$siteFont: 'Raleway', 'Helvetica', sans-serif;
 body{
+  font-family: $siteFont;
   color: #374140;
 }
+
 .container-fluid{
-	padding-left: 0;
-	padding-right: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
+
+#lets-talk{
+  z-index: 100;
+  font-family: 'Pacifico', cursive;
+  position: fixed;
+  width: 400px;
+  top: 19px;
+  right: -171px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-box-shadow: 1px 1px 5px 1px #374140;
+  -moz-box-shadow: 1px 1px 5px 1px #374140;
+  -o-box-shadow: 1px 1px 5px 1px #374140;
+  box-shadow: 1px 1px 5px 1px #374140;
+}
+#lets-talk:hover{
+  cursor: pointer;
+  background-color: #72589D;
+}
+
+#background-container{
+  position: relative;
+}
+
+#background-1{
+  position: absolute;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+#background-2{
+  position: absolute;
+  opacity: 1;
+  z-index: 0;
+}
+
 #elevator-pitch{
+  z-index: 100;
   color: #374140;
   position: absolute;
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-} 
-.project{
-	margin-top: 20px;
-  margin-bottom: 20px;
-	display: inline-block;
-	vertical-align: middle;
 }
+
+#hi{
+  font-size: 5em;
+  font-family: 'Pacifico', cursive;
+  -webkit-transform: rotate(-20deg);
+  -moz-transform: rotate(-20deg);
+  -o-transform: rotate(-20deg);
+  transform: rotate(-20deg);
+  padding-bottom: 30px;
+}
+
+.project{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
 #recent-projects{
   margin-top: 70px;
 }
+
 #more-projects{
   display: none;
 }
+
+#show-more-button{
+  margin-left: 15px;
+}
+
 #site-content{
-	background-color: white;
-	padding-left: 15px;
-	padding-right: 15px;
+  background-color: white;
+  padding-left: 15px;
+  padding-right: 15px;
 }
-#background{
-  background-repeat: none;
-}
+s
 #contact{
   margin-top: 20px;
   padding-top: 40px;
   padding-bottom: 40px;
   background-repeat: none;
 }
+
 .fa-size{
   font-size: 3.5em;
    p{
       font-size: 0.4em;
   }
 }
+
 a{
   color: #374140;
 }
@@ -64,13 +118,41 @@ a:hover{
   color: #2A2C2B;
   text-decoration: none;
 }
+
+@-webkit-keyframes bounce {
+  0%{
+    padding-top: 0px; 
+  }
+  50%{
+    padding-top: 6px; 
+  }
+  100% {
+    padding-top: 0px;
+  }
+}
+.fa-angle-down{
+  cursor: pointer;
+  position: absolute;
+  -webkit-animation: bounce 1s infinite ease-in-out;
+  -moz-animation: bounce 1s infinite ease-in-out;
+  -o-animation: bounce 1s infinite ease-in-out;
+  animation: bounce 1s infinite ease-in-out;
+}
+
 article{
   display: inline-block;
   margin: 10px;
+  a > p{
+    font-family: $siteFont; 
+  }
 }
+
 .btn{
   border: 1px solid #374140;
   border-radius: 4px; 
 }
-
-
+#contact {
+  margin-top: 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
