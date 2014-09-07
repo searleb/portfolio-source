@@ -29,17 +29,14 @@ var svgNew = function(){
 
 	if (draw === 1) {
 		svgDraw1();
-		console.log('draw1');
 	} else {
 		svgDraw2();
-		console.log('draw2');
 	}
 };
 
 var svgDraw1 = function (resize){
 	draw = 2
 		if (resize === 'resize') {	
-			console.log(svg.width);
 			svg.pattern = svg.t.generate(svg.width, svg.height);
 			$('#background-1').css({
 			'min-width': svg.width,
@@ -52,10 +49,7 @@ var svgDraw1 = function (resize){
 	});
 		fade1();
 	};
-	// contact background
-	$('#contact').css({
-		'background': svg.pattern.dataUrl
-	});
+
 	// button hover
 $('.btn').hover(
   function() {
@@ -73,7 +67,6 @@ $('.btn').hover(
 var svgDraw2 = function(resize){
 	draw = 1
 		if (resize === 'resize') {	
-			console.log(svg.width);
 			svg.pattern = svg.t.generate(svg.width, svg.height);
 			$('#background-2').css({
 			'min-width': svg.width,

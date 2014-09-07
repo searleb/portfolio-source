@@ -3,6 +3,7 @@
 @import url(http://fonts.googleapis.com/css?family=Pacifico);
 @import url(http://fonts.googleapis.com/css?family=Raleway);
 $siteFont: 'Raleway', 'Helvetica', sans-serif;
+$scriptFont: 'Pacifico', cursive;
 body{
   font-family: $siteFont;
   color: #374140;
@@ -15,7 +16,6 @@ body{
 
 #lets-talk{
   z-index: 100;
-  font-family: 'Pacifico', cursive;
   position: fixed;
   width: 400px;
   top: 19px;
@@ -31,23 +31,32 @@ body{
 }
 #lets-talk:hover{
   cursor: pointer;
-  background-color: #72589D;
 }
 
-#background-container{
+.background-container{
   position: relative;
 }
 
-#background-1{
+.background-1{
   position: absolute;
   opacity: 0.5;
   z-index: 1;
 }
 
-#background-2{
+.background-2{
   position: absolute;
   opacity: 1;
   z-index: 0;
+}
+
+.script-title{
+  font-size: 5em;
+  font-family: $scriptFont;
+  -webkit-transform: rotate(-20deg);
+  -moz-transform: rotate(-20deg);
+  -o-transform: rotate(-20deg);
+  transform: rotate(-20deg);
+  padding-bottom: 30px;
 }
 
 #elevator-pitch{
@@ -60,63 +69,6 @@ body{
   -moz-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-}
-
-#hi{
-  font-size: 5em;
-  font-family: 'Pacifico', cursive;
-  -webkit-transform: rotate(-20deg);
-  -moz-transform: rotate(-20deg);
-  -o-transform: rotate(-20deg);
-  transform: rotate(-20deg);
-  padding-bottom: 30px;
-}
-
-.project{
-  margin-top: 20px;
-  margin-bottom: 20px;
-  display: inline-block;
-  vertical-align: middle;
-}
-
-#recent-projects{
-  margin-top: 70px;
-}
-
-#more-projects{
-  display: none;
-}
-
-#show-more-button{
-  margin-left: 15px;
-}
-
-#site-content{
-  background-color: white;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-s
-#contact{
-  margin-top: 20px;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  background-repeat: none;
-}
-
-.fa-size{
-  font-size: 3.5em;
-   p{
-      font-size: 0.4em;
-  }
-}
-
-a{
-  color: #374140;
-}
-a:hover{
-  color: #2A2C2B;
-  text-decoration: none;
 }
 
 @-webkit-keyframes bounce {
@@ -139,6 +91,46 @@ a:hover{
   animation: bounce 1s infinite ease-in-out;
 }
 
+.fa-size{
+  font-size: 3.5em;
+   p{
+      font-size: 0.4em;
+  }
+}
+
+#site-content{
+  background-color: white;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.project{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#recent-projects{
+  margin-top: 70px;
+}
+
+#show-more-button{
+  margin-left: 15px;
+}
+
+#more-projects{
+  display: none;
+}
+
+a{
+  color: #374140;
+}
+a:hover{
+  color: #2A2C2B;
+  text-decoration: none;
+}
+
 article{
   display: inline-block;
   margin: 10px;
@@ -151,7 +143,12 @@ article{
   border: 1px solid #374140;
   border-radius: 4px; 
 }
+
 #contact {
+  -webkit-box-shadow: inset 0px -100px 30px -90px #374140;
+  -moz-box-shadow: inset 0px -100px 30px -90px #374140;
+  -o-box-shadow: inset 0px -100px 30px -90px #374140;
+  box-shadow: inset 0px -100px 30px -90px #374140;
   margin-top: 20px;
   padding-top: 40px;
   padding-bottom: 40px;
