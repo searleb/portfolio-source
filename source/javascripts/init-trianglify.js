@@ -1,5 +1,5 @@
-// set #background-* to full window height and fade in the body
 $(document).ready(function(){
+	// set #background-* to full window height and fade in the body
 	var width = $(window).width();
 	var height = $(window).height();
 		$('#background-container').css({
@@ -14,26 +14,48 @@ $(document).ready(function(){
 			'min-width': width,
 			'min-height': height
 		});
+	
+	// call new svg and start recreate svg timeout
+	svgNew();
+	recreateSvg();
+
+	// set .btn background hover to latest svg
+	$('.btn').hover(
+	  function() {
+	    $( this ).css({
+	    	'background-image': svg.pattern.dataUrl,
+	    	'background-position': '0px'
+	    });
+	 	}, function() {
+	    $( this ).css({
+	    	'background-image': 'none'
+	   });
+  });
 });
 
+// set global svg object
 var svg = {};
+// used to determine which background to draw to
 var draw = 1
-
+// create new svg 
 var svgNew = function(){
 	svg.t = new Trianglify({
 		noiseIntensity: 0,
 	});
+	// set svg size to window height and width
 	svg.width = $(window).width();
 	svg.height = $(window).height();
 	svg.pattern = svg.t.generate(svg.width, svg.height);
-
+	// draw svg on to either background 1 or 2
 	if (draw === 1) {
 		svgDraw1();
 	} else {
 		svgDraw2();
 	}
-};
+}; // end svgNew
 
+// draw svg on to bg1 and call fade
+// if called with resize, redraw the svg to match new size and do not call fade
 var svgDraw1 = function (resize){
 	draw = 2
 		if (resize === 'resize') {	
@@ -49,21 +71,9 @@ var svgDraw1 = function (resize){
 	});
 		fade1();
 	};
-
-	// button hover
-$('.btn').hover(
-  function() {
-    $( this ).css({
-    	'background-image': svg.pattern.dataUrl
-    });
-  }, function() {
-    $( this ).css({
-    	'background-image': 'none'
-    });
-  });
 }; // end svgDraw1
 
-
+// same as above but for bg2
 var svgDraw2 = function(resize){
 	draw = 1
 		if (resize === 'resize') {	
@@ -79,26 +89,25 @@ var svgDraw2 = function(resize){
 	});
 		fade2();
 	};
-};
+}; // end svgDraw2
 
+// fade in bg1 and fade our bg2
 var fade1 = function(){
 	$('#background-1').velocity("fadeIn", { duration: 3000 });
 	$('#background-2').velocity("fadeOut", { duration: 4000 });
 };
+// fade in bg2 and fade out bg1
 var fade2 = function(){
 	$('#background-2').velocity("fadeIn", { duration: 3000 });
 	$('#background-1').velocity("fadeOut", { duration: 4000 });
 };
 
+// timeout function to create new svg every 5 seconds
 var recreateSvg = function(){
  	window.setInterval(svgNew, 5000)
 }
 
-$(document).ready(function(){
-	svgNew();
-	recreateSvg();
-});
-
+// redraw the current svg to match screen size on resize
 $(window).resize(function() {
 	svg.width = $(window).width();
 	svg.height = $(window).height();
