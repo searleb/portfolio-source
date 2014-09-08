@@ -59,7 +59,7 @@ body{
   padding-bottom: 30px;
 }
 
-#elevator-pitch{
+#elevator-pitch, #contact{
   z-index: 100;
   color: #374140;
   position: absolute;
@@ -70,6 +70,12 @@ body{
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+// #contact-container{
+//   min-height: 200px;
+// }
+// #contact-background-1, #contact-background-2{
+//   min-height: 100%;
+// }
 
 @-webkit-keyframes bounce {
   0%{
@@ -117,6 +123,7 @@ body{
 
 #show-more-button{
   margin-left: 15px;
+  margin-bottom: 40px;
 }
 
 #more-projects{
@@ -142,14 +149,4 @@ article{
 .btn{
   border: 1px solid #374140;
   border-radius: 4px; 
-}
-
-#contact {
-  -webkit-box-shadow: inset 0px -100px 30px -90px #374140;
-  -moz-box-shadow: inset 0px -100px 30px -90px #374140;
-  -o-box-shadow: inset 0px -100px 30px -90px #374140;
-  box-shadow: inset 0px -100px 30px -90px #374140;
-  margin-top: 20px;
-  padding-top: 40px;
-  padding-bottom: 40px;
 }

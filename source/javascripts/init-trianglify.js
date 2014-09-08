@@ -14,6 +14,19 @@ $(document).ready(function(){
 			'min-width': width,
 			'min-height': height
 		});
+
+		$('#contact-container').css({
+			'min-width': width,
+			'min-height': (height / 4) 
+		});
+		$('#contact-background-1').css({
+			'min-width': width,
+			'min-height': (height / 4) 
+		});
+		$('#contact-background-2').css({
+			'min-width': width,
+			'min-height': (height / 4) 
+		});
 	
 	// call new svg and start recreate svg timeout
 	svgNew();
@@ -58,17 +71,22 @@ var svgNew = function(){
 // if called with resize, redraw the svg to match new size and do not call fade
 var svgDraw1 = function (resize){
 	draw = 2
-		if (resize === 'resize') {	
-			svg.pattern = svg.t.generate(svg.width, svg.height);
-			$('#background-1').css({
+	if (resize === 'resize') {	
+		svg.pattern = svg.t.generate(svg.width, svg.height);
+		$('#background-1').css({
 			'min-width': svg.width,
 			'min-height': svg.height,
 			'background': svg.pattern.dataUrl
 		});
+		$('#contact-background-1').css({
+			'min-width': svg.width,
+			'min-height': (svg.height / 4),
+			'background': svg.pattern.dataUrl
+		});
 	} else {
-	$('#background-1').css({
-		'background': svg.pattern.dataUrl
-	});
+		$('.background-1').css({
+			'background': svg.pattern.dataUrl
+		});
 		fade1();
 	};
 }; // end svgDraw1
@@ -76,30 +94,35 @@ var svgDraw1 = function (resize){
 // same as above but for bg2
 var svgDraw2 = function(resize){
 	draw = 1
-		if (resize === 'resize') {	
-			svg.pattern = svg.t.generate(svg.width, svg.height);
-			$('#background-2').css({
+	if (resize === 'resize') {	
+		svg.pattern = svg.t.generate(svg.width, svg.height);
+		$('#background-2').css({
 			'min-width': svg.width,
 			'min-height': svg.height,
 			'background': svg.pattern.dataUrl
 		});
+		$('#contact-background-2').css({
+			'min-width': svg.width,
+			'min-height': (svg.height / 4),
+			'background': svg.pattern.dataUrl
+		});
 	} else {
-	$('#background-2').css({
-		'background': svg.pattern.dataUrl
-	});
+		$('.background-2').css({
+			'background': svg.pattern.dataUrl
+		});
 		fade2();
 	};
 }; // end svgDraw2
 
 // fade in bg1 and fade our bg2
 var fade1 = function(){
-	$('#background-1').velocity("fadeIn", { duration: 3000 });
-	$('#background-2').velocity("fadeOut", { duration: 4000 });
+	$('.background-1').velocity("fadeIn", { duration: 3000 });
+	$('.background-2').velocity("fadeOut", { duration: 4000 });
 };
 // fade in bg2 and fade out bg1
 var fade2 = function(){
-	$('#background-2').velocity("fadeIn", { duration: 3000 });
-	$('#background-1').velocity("fadeOut", { duration: 4000 });
+	$('.background-2').velocity("fadeIn", { duration: 3000 });
+	$('.background-1').velocity("fadeOut", { duration: 4000 });
 };
 
 // timeout function to create new svg every 5 seconds
@@ -114,6 +137,10 @@ $(window).resize(function() {
 	$('#background-container').css({
 		'min-width': svg.width,
 		'min-height': svg.height
+	});
+	$('#contact-container').css({
+		'min-width': svg.width,
+		'min-height': (svg.height / 4)
 	});
 	svgDraw1('resize');
 	svgDraw2('resize');
