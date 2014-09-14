@@ -29,6 +29,7 @@ body{
   -o-box-shadow: 1px 1px 5px 1px #374140;
   box-shadow: 1px 1px 5px 1px #374140;
 }
+
 #lets-talk:hover{
   cursor: pointer;
 }
@@ -70,12 +71,7 @@ body{
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-// #contact-container{
-//   bottom: 0;
-// }
-// #contact-background-1, #contact-background-2{
-//   bottom: 0;
-// }
+
 .contact-size{
   bottom: 0;
   padding-left: 0;
@@ -94,6 +90,7 @@ body{
     padding-top: 0px;
   }
 }
+
 .fa-angle-down{
   cursor: pointer;
   position: absolute;
@@ -121,6 +118,10 @@ body{
   margin-bottom: 20px;
   display: inline-block;
   vertical-align: middle;
+}
+
+small{
+  opacity: .5;
 }
 
 #recent-projects{
