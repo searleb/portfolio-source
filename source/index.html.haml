@@ -35,7 +35,12 @@
 				%p 
 					%small Ruby 92.0% | CSS 5.8% | JavaScript 2.2%
 
-				#weatherify-link.btn Listen here
+				#weatherify-link.btn.disabled 
+					%s Listen here
+				%p
+					%small Sorry, I'm currently in state of: "App crashed".
+				%p 
+					%small Thanks Heroku.
 
 			%div.col-sm-4
 				%img.img-responsive{:src => "/images/weatherify-white.jpg", :alt => "Weatherify"}
@@ -137,7 +142,7 @@
 				%div.col-sm-4.col-sm-offset-2.col-sm-push-4
 					%h3 Portfolio!
 					%p And of course this very site.
-					%p Built with Middleman, HAML, SASS and I forgot to use CoffeeScript... 
+					%p Built with Middleman, HAML, SASS and jQuery. 
 					%p
 						%small  JavaScript 54.1% | CSS 45.9% 
 				%div.col-sm-4.col-sm-pull-4
