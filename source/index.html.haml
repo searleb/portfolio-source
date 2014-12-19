@@ -6,16 +6,14 @@
 		%p 
 			I am a 
 			%strong 
-				full stack web developer,
+				web developer,
 			interested in clean, smart designs and interactivity.
 		%p 
-			Currently 
-			%strong 
-				available
-			for work in the 
+			Currently coding in
 			%s London
 			%s New York
-			Sydney area.
+			Sydney for
+			%a{:href => "http://www.mentallyfriendly.com/", :target => "blank"}Mentally Friendly.
 		%p Please take a look around.
 		%i.fa.fa-angle-down.fa-size.row
 	%div#background-1.background-1
@@ -24,27 +22,23 @@
 		/ %p 2
 
 #site-content
-	-# Weatherify
 	%h1#recent-projects.text-center Recent Projects 
 	%div.row
+		-# Hex Clock
 		%section.project.col-sm-12
 			%div.col-sm-4.col-sm-offset-2
-				%h3 Weatherify.
-				%p Weatherify takes your local weather conditions and creates a Spotify playlist based on that information.
-				%p For example, if your summary is 'Partly Cloudy', Weatherify will create a playlist of tracks containing 'cloudy' in their title.
+				%h3 Hex Clock.
+				%p Lighten up.
+				%p The Hex Clock for Chrome replaces your new tab with a 24hr clock and corresponding hex coded background. Seamlessly fading into the next colour every second. 
 				%p 
-					%small Ruby 92.0% | CSS 5.8% | JavaScript 2.2%
-
-				#weatherify-link.btn.disabled 
-					%s Listen here
-				%p
-					%small Sorry, I'm currently in state of: "App crashed".
-				%p 
-					%small Thanks Heroku.
-
+					%small  JavaScript 70.4%	| CSS 29.6%
+				
+				#clock-demo-link.btn Demo
+				#clock-install-link.btn Install
+			
 			%div.col-sm-4
-				%img.img-responsive{:src => "/images/weatherify-white.jpg", :alt => "Weatherify"}
-	
+				%img.img-responsive{:src => "/images/clock.png", :alt => "Hex Clock"}
+
 	%div.row
 		-# Bero
 		%section.project.col-sm-12
@@ -59,6 +53,8 @@
 			
 			%div.col-sm-4.col-sm-pull-4
 				%img.img-responsive{:src => "/images/bero.jpg", :alt => "Bero"}
+	
+	
  	
 	%div.row
 		-# Tweet in a bottle
@@ -81,8 +77,8 @@
 			%div.col-sm-4
 				%img.img-responsive{:src => "/images/tweetbottle-white.jpg", :alt => "Tweet in a bottle"}
 	
-	%section.col-sm-offset-2 
-		#show-more-button.show-more.btn See more projects
+	%section.col-sm-4.col-sm-offset-4 
+		#show-more-button.show-more.btn.btn-block See more projects
 
 	#more-projects
 		.row
@@ -142,11 +138,31 @@
 				%div.col-sm-4.col-sm-offset-2.col-sm-push-4
 					%h3 Portfolio!
 					%p And of course this very site.
-					%p Built with Middleman, HAML, SASS and jQuery. 
+					%p Built on Middleman with HAML, SCSS and jQuery. 
 					%p
 						%small  JavaScript 54.1% | CSS 45.9% 
 				%div.col-sm-4.col-sm-pull-4
 					%img.img-responsive{:src => "/images/portfolio.jpg", :alt => "Portfolio"}
+
+		%div.row
+			-# Weatherify
+			%section.project.col-sm-12
+				%div.col-sm-4.col-sm-offset-2
+					%h3 Weatherify.
+					%p Weatherify takes your local weather conditions and creates a Spotify playlist based on that information.
+					%p For example, if your summary is 'Partly Cloudy', Weatherify will create a playlist of tracks containing 'cloudy' in their title.
+					%p 
+						%small Ruby 92.0% | CSS 5.8% | JavaScript 2.2%
+
+					#weatherify-link.btn.disabled 
+						%s Listen here
+					%p
+						%small Sorry, I'm currently in state of: "App crashed".
+					%p 
+						%small Thanks Heroku.
+
+				%div.col-sm-4
+					%img.img-responsive{:src => "/images/weatherify-white.jpg", :alt => "Weatherify"}
 
 %div#contact-container.contact-size.col-sm-12
 	%footer#contact.text-center.col-xs-12
