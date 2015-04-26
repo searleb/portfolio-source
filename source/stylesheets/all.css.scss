@@ -114,8 +114,8 @@ body{
 }
 
 .project{
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
   display: inline-block;
   vertical-align: middle;
 }
@@ -139,9 +139,9 @@ small{
 }
 
 a{
-  color: #353F3E;
+  color: #000;
   &:hover{
-    color: #000000;
+    color: #353F3E;
     text-decoration: none;
   }
 }
