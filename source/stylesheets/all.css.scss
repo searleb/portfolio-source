@@ -6,7 +6,7 @@ $siteFont: 'Raleway', 'Helvetica', sans-serif;
 $scriptFont: 'Pacifico', cursive;
 body{
   font-family: $siteFont;
-  color: #374140;
+  color: #353F3E;
 }
 
 .container-fluid{
@@ -101,7 +101,7 @@ body{
 }
 
 .fa-size{
-  font-size: 3.5em;
+  font-size: 2.6em;
    p{
       font-size: 0.4em;
   }
@@ -138,12 +138,13 @@ small{
 }
 
 a{
-  color: #374140;
+  color: #353F3E;
+  &:hover{
+    color: #000000;
+    text-decoration: none;
+  }
 }
-a:hover{
-  color: #2A2C2B;
-  text-decoration: none;
-}
+
 
 article{
   display: inline-block;
